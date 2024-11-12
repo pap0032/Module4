@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night.png" translatesAutoresizingMaskIntoConstraints="NO" id="KHK-Kd-yt4">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WUY-LV-Eok">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-B6-exJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="378"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="60" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX5-DV-Mky">
+                                                <rect key="frame" x="36.666666666666657" y="162" width="320" height="216"/>
+                                                <connections>
+                                                    <action selector="timePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OPM-CY-IXW"/>
+                                                </connections>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmT-Zv-Nww">
+                                                <rect key="frame" x="168.33333333333334" y="162" width="56.666666666666657" height="28.666666666666657"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SmT-Zv-Nww" firstAttribute="centerY" secondItem="UGT-B6-exJ" secondAttribute="centerY" constant="-12.67" id="7Y4-bI-sTw"/>
+                                            <constraint firstItem="UX5-DV-Mky" firstAttribute="centerY" secondItem="UGT-B6-exJ" secondAttribute="centerY" constant="81" id="PEa-8T-wdG"/>
+                                            <constraint firstItem="SmT-Zv-Nww" firstAttribute="centerX" secondItem="UGT-B6-exJ" secondAttribute="centerX" id="jae-uT-Id7"/>
+                                            <constraint firstItem="UX5-DV-Mky" firstAttribute="centerX" secondItem="UGT-B6-exJ" secondAttribute="centerX" id="nsR-HO-d8g"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUP-Wz-DcY">
+                                        <rect key="frame" x="0.0" y="381" width="393" height="378"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHz-Em-qrt">
+                                                <rect key="frame" x="104.66666666666669" y="144" width="183.66666666666663" height="40.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Start/Stop Timer" cornerStyle="capsule" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="24"/>
+                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="startStopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Gp-0B-DqP"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nR8-04-Yfb">
+                                                <rect key="frame" x="168.33333333333334" y="205.66666666666663" width="56.666666666666657" height="28.666666666666657"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nR8-04-Yfb" firstAttribute="centerX" secondItem="jUP-Wz-DcY" secondAttribute="centerX" id="ZH9-Kw-aPG"/>
+                                            <constraint firstItem="jHz-Em-qrt" firstAttribute="centerX" secondItem="jUP-Wz-DcY" secondAttribute="centerX" id="bmT-oc-Jw0"/>
+                                            <constraint firstItem="jHz-Em-qrt" firstAttribute="centerY" secondItem="jUP-Wz-DcY" secondAttribute="centerY" constant="-24.829999999999998" id="bnq-tv-w4f"/>
+                                            <constraint firstItem="nR8-04-Yfb" firstAttribute="centerY" secondItem="jUP-Wz-DcY" secondAttribute="centerY" constant="31" id="hSe-lD-sVN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KHK-Kd-yt4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1XM-Te-aI5"/>
+                            <constraint firstItem="KHK-Kd-yt4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="3Bi-tz-fDb"/>
+                            <constraint firstItem="WUY-LV-Eok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Au-p1-gGL"/>
+                            <constraint firstAttribute="bottom" secondItem="KHK-Kd-yt4" secondAttribute="bottom" id="8iU-Th-VFT"/>
+                            <constraint firstItem="KHK-Kd-yt4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D8R-D7-vOC"/>
+                            <constraint firstAttribute="trailing" secondItem="WUY-LV-Eok" secondAttribute="trailing" id="OH2-dV-m1r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WUY-LV-Eok" secondAttribute="bottom" id="ZnS-9v-H1h"/>
+                            <constraint firstItem="WUY-LV-Eok" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aIr-oo-TnT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="KHK-Kd-yt4" id="ti2-iZ-CYE"/>
+                        <outlet property="datePicker" destination="UX5-DV-Mky" id="ztP-wb-KB7"/>
+                        <outlet property="label1" destination="SmT-Zv-Nww" id="3r1-BA-KB2"/>
+                        <outlet property="label2" destination="nR8-04-Yfb" id="1z6-uW-gOa"/>
+                        <outlet property="startStopButton" destination="jHz-Em-qrt" id="0EF-Rn-4hN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="night.png" width="626" height="358"/>
+    </resources>
+</document>
